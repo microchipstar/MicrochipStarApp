@@ -40,8 +40,6 @@ public class employeeService {
         if (requestBody.getName_E() != null)
             record.setName_E(requestBody.getName_E());
 
-        if (requestBody.getCheckPassword_E() != null)
-            record.setCheckPassword_E(requestBody.getCheckPassword_E());
 
         if (requestBody.getEmail_E() != null)
             record.setEmail_E(requestBody.getEmail_E());

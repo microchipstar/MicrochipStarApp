@@ -17,7 +17,6 @@ public class employee {
 
     private String Username_E;
     private String Password_E;
-    private String checkPassword_E;
     private String email_E;
     private String Name_E;
 
@@ -62,11 +61,4 @@ public class employee {
         Name_E = name_E;
     }
 
-    public String getCheckPassword_E() {
-        return checkPassword_E;
-    }
-
-    public void setCheckPassword_E(String checkPassword_E) {
-        this.checkPassword_E = checkPassword_E;
-    }
 }
