@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Service Website</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div class="container">
+    <h1 class="display-6">Product</h1>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <td>Path</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${products}">
+            <td th:text="${product.id_P}"></td>
+            <td th:text="${product.name_P}"></td>
+            <td th:text="${product.price_P}"></td>
+            <td th:text="${product.quantity_P}"></td>
+            <td th:text="${product.image_P}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

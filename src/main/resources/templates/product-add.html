@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Service Website</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div class="container">
+    <h1 class="display-6">Add Product</h1>
+
+    <form th:action="@{/product/add}" method="POST">
+        <div class="mb-3">
+            <label for="idInput" class="form-label">ID</label>
+            <input id="idInput" type="text" class="form-control" name="id_P" placeholder="id product">
+        </div>
+        <div class="mb-3">
+            <label for="nameInput" class="form-label">Name Product</label>
+            <input id="nameInput" type="text" class="form-control" name="name_P" placeholder="product">
+        </div>
+        <div class="mb-3">
+            <label for="priceInput" class="form-label">Price</label>
+            <input id="priceInput" type="text" class="form-control" name="price_P" placeholder="price">
+        </div>
+        <div class="mb-3">
+            <label for="quantityInput" class="form-label">Quantity</label>
+            <input id="quantityInput" type="text" class="form-control" name="quantity_P">
+        </div>
+        <div class="mb-3">
+            <label for="imageInput" class="form-label">Image path</label>
+            <input id="imageInput" type="text" class="form-control" name="image_P">
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
+</body>
+</html>
