@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" th:fragment="header">
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" th:href="@{/}">
+                    <img src="https://cdn.discordapp.com/attachments/797542286145224707/895246484214276117/unknown.png" alt="" width="30" height="24">
+                </a>
+            </div>
+        </nav>
+        <a class="navbar-brand" th:href="@{/}">MicrochipsStarApp</a>
+
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/}">Home</a>
+                </li>
+
+
+
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Products
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" th:href="@{/Products/8-bit Microcontrollers}">8-bit Microcontrollers</a></li>
+                        <li><a class="dropdown-item" th:href="@{/Products/16-bit Microcontrollers}">16-bit Microcontrollers</a></li>
+                        <li><a class="dropdown-item" th:href="@{/Products/32-bit microcontrollers}">32-bit microcontrollers</a></li>
+                    </ul>
+                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/cart/add}">สั่งสินค้า</a>
+                                </li>
+
+            </ul>
+
+
+
+<!--            <div sec:authorize="isAuthenticated()">-->
+<!--                <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="btn btn-outline-secondary" th:href="@{/cart}">สั่งสินค้า</a>-->
+<!--                        <a class="btn btn-secondary" th:href="@{/logout}">Logout</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div sec:authorize="isAuthenticated()">-->
+<!--                <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="btn btn-outline-secondary" th:href="@{/cart/add}">สั่งสินค้า</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+
+
+<!--            <div sec:authorize="isAnonymous()">-->
+<!--                <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="btn btn-primary" th:href="@{/loginyes}" role="button">Login</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div sec:authorize="isAnonymous()">-->
+<!--                <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="btn btn-outline-secondary" th:href="@{/cart/add}">สั่งสินค้า</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+
+
+
+
+
+        </div>
+    </div>
+</nav>
+
+</nav>
+</body>
+</html>

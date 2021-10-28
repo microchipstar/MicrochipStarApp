@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>16-bit Microcontrollers</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div th:insert="fragments/header :: header"></div>
+<h1>16-bit Microcontrollers</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4" style="width: 95rem;">
+    <div class="col">
+        <div class="card h-100" >
+            <img src="https://www.microchip.com/content/dam/mchp/mrt-dam/ic-images/pdip/14-lead-d2x/PIC24F04KL100-D2X-Regular.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">PIC24F04KL100-I/ST</h5>
+
+                <h6 class="card-title">Order Quantity/USD per Unit</h6>
+                <h6 class="card-title">1000-4999/$0.97</h6>
+                <h6 class="card-title">5000+/$0.92</h6>
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Product Features
+                </button><br><br>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Product Features</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h6 class="card-title">Typical XLP specifications include:</h6>
+                                <h6 class="card-title">- Sleep mode currents as low as 30nA at 25C</h6>
+                                <h6 class="card-title">- Run mode currents under 350uA/MHz</h6>
+                                <h6 class="card-title">- Idle mode currents under 80uA/MHz at 1.8V</h6>
+                                <h6 class="card-title">- Watchdog timer as low as 210nA at 25C</h6>
+
+                                <h6 class="card-title">CPU:</h6>
+                                <h6 class="card-title">- Up to 16 MIPS performance</h6>
+                                <h6 class="card-title">- Single Cycle Instruction Execution</h6>
+                                <h6 class="card-title">- 16 x 16 Hardware Multiply, & 32-bit x 16-bit Hardware Divider</h6>
+                                <h6 class="card-title">- C Compiler Optimized Instruction Set System</h6>
+
+                                <h6 class="card-title">Peripherals:</h6>
+                                <h6 class="card-title">- Analog rail-to-rail comparator</h6>
+                                <h6 class="card-title">- UART Module with LIN and IrDA support</h6>
+                                <h6 class="card-title">- Master Synchronous Serial Port module (MSSPs) with two modes of operation : SPI/ I2C™</h6>
+                                <h6 class="card-title">- Two CCP modules</h6>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!--                <div class="mb-3">-->
+<!--                    <input type="quantity" class="form-control" id="exampleFormControlInput3" placeholder="quantity">-->
+<!--                </div>-->
+
+<!--                <a href="#" class="btn btn-primary">Add Cart</a>-->
+            </div>
+
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100" >
+            <img src="https://www.microchip.com/_images/ics/medium-dsPIC33CK32MC102-SSOP-28.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">DSPIC33CK32MC102-I/SS</h5>
+
+                <h6 class="card-title">Order Quantity/USD per Unit</h6>
+                <h6 class="card-title">1-24/$1.50</h6>
+                <h6 class="card-title">25-99/$1.36</h6>
+                <h6 class="card-title">100+/$1.24</h6>
+
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                    Product Features
+                </button><br><br>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel1">Product Features</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <h6 class="card-title">Operating Conditions:</h6>
+                                <h6 class="card-title">- 3.0 V to 3.6 V</h6>
+                                <h6 class="card-title">- -40ºC to +125ºC, DC to 100 MIPS</h6>
+                                <h6 class="card-title">- -40ºC to +150ºC, DC to 70 MIPS</h6>
+
+                                <h6 class="card-title">dsPIC33CK DSC Core:</h6>
+                                <h6 class="card-title">- Up to 64 KBytes of Program Flash with ECC and Fault Injection testing feature</h6>
+                                <h6 class="card-title">- Up to 8 KBytes of Data SRAM with Memory Built in Self-Test (MBIST)</h6>
+                                <h6 class="card-title">- Code efficient (C and Assembly) CPU architecture designed for real-time applications</h6>
+                                <h6 class="card-title">- Sixteen 16-bit working registers</h6>
+                                <h6 class="card-title">- Four sets of interrupt context saving registers, including ACC and CPU status for fast interrupt handling</h6>
+                                <h6 class="card-title">- Single-cycle, mixed-sign 32-bit multiplication</h6>
+                                <h6 class="card-title">- Fast 6-cycle hardware 32/16 and 16/16 DIV</h6>
+                                <h6 class="card-title">- Dual 40-bit fixed point Accumulators (ACC) for DSP operations</h6>
+                                <h6 class="card-title">- Clock chopping for high-frequency operation</h6>
+                                <h6 class="card-title">- Fault and current limit inputs</h6>
+                                <h6 class="card-title">- Flexible trigger configuration for ADC triggering</h6>
+
+                                <h6 class="card-title">Advanced Analog Features:</h6>
+                                <h6 class="card-title">- 12-bit 3.5 MSPS ADC Module</h6>
+                                <h6 class="card-title">- Up to 15 ADC input channels (depending on package)</h6>
+                                <h6 class="card-title">- Four digital comparators for reducing CPU overhead</h6>
+                                <h6 class="card-title">- Four oversampling filers up to 256x for increased resolution (up to 16-bits)</h6>
+                                <h6 class="card-title">- One analog comparator (15ns) with dedicated 12-bit DAC with hardware slope compensation and DAC buffer output</h6>
+                                <h6 class="card-title">- Up to three op amps with internal connection to ADC Module</h6>
+
+                                <h6 class="card-title">Timer/Counters/Output Compare/Input Capture:</h6>
+                                <h6 class="card-title">- One Dedicated 16-Bit Timer/Counter</h6>
+                                <h6 class="card-title">- Four SCCP - Flexible configuration as four PWM outputs (down to 4ns resolution), input capture, output compare, eight 16-bit timer/counters or up to four 32-bit timer/counters</h6>
+                                <h6 class="card-title">- Peripheral Trigger Generator (PTG) for scheduling complex sequences or alternate configuration as two 16-bit timer</h6>
+                                <h6 class="card-title">- Quadrature Encoder Interface (QEI) Modules for optical encoder support or alternate configuration as a 32-bit timer</h6>
+
+                                <h6 class="card-title">Communication Interfaces:</h6>
+                                <h6 class="card-title">- Three UARTs (15 Mbps) with automated protocol handling for LIN/J2602 and DMX</h6>
+                                <h6 class="card-title">- Two 4-wire SPI/I2S up to 40 MHz with dedicated pins</h6>
+                                <h6 class="card-title">- One I2C Modules (up to 1 Mbps) with SMBus support</h6>
+                                <h6 class="card-title">- One Single-Edge Nibble Transmission (SENT) Modules for sensor interfacing</h6>
+                                <h6 class="card-title">- Four DMA channels supporting data transfers</h6>
+
+                                <h6 class="card-title">Special Features:</h6>
+                                <h6 class="card-title">- Four Configurable Logic Cell (CLC) Modules with user defined logic gate circuits</h6>
+                                <h6 class="card-title">- Programmable Pin Select (PPS) for peripheral pin function mapping</h6>
+                                <h6 class="card-title">- On-chip temperature sensor with direct ADC Module connection</h6>
+                                <h6 class="card-title">- 256 Bytes of One-Time-Programmable (OTP) Memory and 120-bit Unique Device Identifier (UDID)</h6>
+
+                                <h6 class="card-title">Clock and Power Management:</h6>
+                                <h6 class="card-title">- On-chip 8 MHz Fast RC (FRC)</h6>
+                                <h6 class="card-title">- Programmable PLLs with external oscillator clock sources and Reference Clock Output (REFO)</h6>
+                                <h6 class="card-title">- Fail-Safe Clock Monitor (FSCM) with 8 MHz Back-up Fast RC (BFRC) oscillator</h6>
+                                <h6 class="card-title">- Low-Power management modes - Sleep, Idle and Doze</h6>
+                                <h6 class="card-title">- Integrated Power-on Reset (POR) and Brown-Out Reset (BOR)</h6>
+
+                                <h6 class="card-title">Debugger Development Support:</h6>
+                                <h6 class="card-title">- In-Circuit and in application programming and debug support (ICSP)</h6>
+                                <h6 class="card-title">- On-chip debug with 3 complex and 5 simple breakpoints</h6>
+                                <h6 class="card-title">- IEEE 1149.2 (JTAG) boundary scan support</h6>
+
+                                <h6 class="card-title">Safety Features:</h6>
+                                <h6 class="card-title">- Dead-Man Timer (DMT) safety feature clocked by instruction fetches</h6>
+                                <h6 class="card-title">- Windowed Watch Dog Timer (WWDT)</h6>
+                                <h6 class="card-title">- CodeGuard™ security for program FLASH</h6>
+                                <h6 class="card-title">- FLASH with ECC and Fault Injection testing feature</h6>
+                                <h6 class="card-title">- Flash OTP by ICSP™ write inhibit</h6>
+                                <h6 class="card-title">- Memory Built in Self-Test (MBIST)</h6>
+                                <h6 class="card-title">- Clock Monitor with multiple redundant clock sources</h6>
+                                <h6 class="card-title">- Programmable Cyclic Redundancy Check (CRC)</h6>
+                                <h6 class="card-title">- Hardware traps</h6>
+                                <h6 class="card-title">- SFR locks</h6>
+                                <h6 class="card-title">- Shadow working registers</h6>
+                                <h6 class="card-title">- PWM Fault Management</h6>
+                                <h6 class="card-title">- cap-less on-chip LDO</h6>
+                                <h6 class="card-title">- I/O Port read-back</h6>
+                                <h6 class="card-title">- Class B Safety Library, IEC 60730</h6>
+
+                                <h6 class="card-title">Functional Safety support (ISO26262):</h6>
+                                <h6 class="card-title">- Ideal for ASIL-B & ASIL-C focused applications</h6>
+                                <h6 class="card-title">- FMEDA, Diagnostic Software and Functional Safety manual available under NDA upon request to your sales office</h6>
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!--                <div class="mb-3">-->
+<!--                    <input type="quantity" class="form-control" id="exampleFormControlInput2" placeholder="quantity">-->
+<!--                </div>-->
+<!--                <a href="#" class="btn btn-primary">Add Cart</a>-->
+
+            </div>
+
+            </div>
+
+
+        </div>
+    <div class="col">
+        <div class="card h-100" >
+            <img src="https://www.microchip.com/_images/ics/medium-dsPIC33EP32MC202-SSOP-28.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">DSPIC33EP32MC202-I/SS</h5>
+
+                <h6 class="card-title">Order Quantity/USD per Unit</h6>
+                <h6 class="card-title">1-24/$1.78</h6>
+                <h6 class="card-title">25-99/$1.61</h6>
+                <h6 class="card-title">100+/$1.46</h6>
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                    Product Features
+                </button><br><br>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel2">Product Features</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <h6 class="card-title">Operating Conditions:</h6>
+                                <h6 class="card-title">- 3.0V to 3.6V, -40ºC to +85ºC, DC to 70 MIPS</h6>
+                                <h6 class="card-title">- 3.0V to 3.6V, -40ºC to +150ºC, DC to 60 MIPS</h6>
+
+
+                                <h6 class="card-title">dsPIC33E DSC Core:</h6>
+                                <h6 class="card-title">- Modified Harvard Architecture</h6>
+                                <h6 class="card-title">- C Compiler Optimized Instruction Set</h6>
+                                <h6 class="card-title">- 16-bit Wide Data Path</h6>
+                                <h6 class="card-title">- 24-bit Wide Instructions</h6>
+                                <h6 class="card-title">- 16x16 Integer Multiply Operations</h6>
+                                <h6 class="card-title">- 32/16 and 16/16 Integer Divide Operations</h6>
+                                <h6 class="card-title">- Two 40-bit Accumulators with Rounding and Saturation Options</h6>
+                                <h6 class="card-title">- Single-Cycle Multiply and Accumulate</h6>
+                                <h6 class="card-title">- Single-Cycle shifts for up to 40-bit Data</h6>
+                                <h6 class="card-title">- 16x16 Fractional Multiply/Divide Operations</h6>
+                                <h6 class="card-title">- High-Speed PWM</h6>
+
+                                <h6 class="card-title">Up to three PWM pairs with independent timing:</h6>
+                                <h6 class="card-title">- Dead time for rising and falling edges</h6>
+                                <h6 class="card-title">- 7.14 ns PWM resolution</h6>
+                                <h6 class="card-title">- PWM support for Inverters, PFC, Lighting- BLDC, PMSM, ACIM, SRM</h6>
+                                <h6 class="card-title">- Programmable Fault inputs</h6>
+                                <h6 class="card-title">- Flexible trigger configurations for ADC conversions</h6>
+
+                                <h6 class="card-title">Advanced Analog Features:</h6>
+                                <h6 class="card-title">- ADC module: Configurable as 10-bit, 1.1 Msps with four S&H or 12-bit, 500 ksps with one S&H</h6>
+                                <h6 class="card-title">- Up to three Op amp/Comparators</h6>
+                                <h6 class="card-title">- Op Amp direct connection to the ADC module</h6>
+                                <h6 class="card-title">- Additional dedicated comparator</h6>
+                                <h6 class="card-title">- Programmable references with 32 voltage points for comparators</h6>
+                                <h6 class="card-title">- Charge Time Measurement Unit (CTMU)</h6>
+
+                                <h6 class="card-title">Communication Interfaces:</h6>
+                                <h6 class="card-title">- Three UARTs (15 Mbps) with automated protocol handling for LIN/J2602 and DMX</h6>
+                                <h6 class="card-title">- Two 4-wire SPI/I2S up to 40 MHz with dedicated pins</h6>
+                                <h6 class="card-title">- One I2C Modules (up to 1 Mbps) with SMBus support</h6>
+                                <h6 class="card-title">- One Single-Edge Nibble Transmission (SENT) Modules for sensor interfacing</h6>
+                                <h6 class="card-title">- Four DMA channels supporting data transfers</h6>
+
+                                <h6 class="card-title">Special Features:</h6>
+                                <h6 class="card-title">- Four Configurable Logic Cell (CLC) Modules with user defined logic gate circuits</h6>
+                                <h6 class="card-title">- Programmable Pin Select (PPS) for peripheral pin function mapping</h6>
+                                <h6 class="card-title">- On-chip temperature sensor with direct ADC Module connection</h6>
+                                <h6 class="card-title">- 256 Bytes of One-Time-Programmable (OTP) Memory and 120-bit Unique Device Identifier (UDID)</h6>
+
+                                <h6 class="card-title">Timers/Output Compare/Input Capture:</h6>
+                                <h6 class="card-title">- 12 general purpose timers</h6>
+                                <h6 class="card-title">- Five 16-bit and up to two 32-bit timers/counters</h6>
+                                <h6 class="card-title">- Four OC modules configurable as timers/counters</h6>
+                                <h6 class="card-title">- PTG module with two configurable timers/counters</h6>
+                                <h6 class="card-title">- 32-bit Quadrature Encoder Interface (QEI) module configurable as a timer/counter</h6>
+                                <h6 class="card-title">- Four IC modules</h6>
+                                <h6 class="card-title">- Peripheral Trigger Generator (PTG) for scheduling complex sequences</h6>
+
+                                <h6 class="card-title">Communication Interfaces:</h6>
+                                <h6 class="card-title">- Two UART modules (15 Mbps)</h6>
+                                <h6 class="card-title">- Two 4-wire SPI modules (15 Mbps)</h6>
+                                <h6 class="card-title">- Two I2C™ modules (up to 1 Mbaud) with SMBus support</h6>
+                                <h6 class="card-title">- PPS to allow function remap</h6>
+                                <h6 class="card-title">- Programmable Cyclic Redundancy Check (CRC)</h6>
+
+                                <h6 class="card-title">Direct Memory Access (DMA):</h6>
+                                <h6 class="card-title">- 4-channel DMA with user-selectable priority arbitration</h6>
+                                <h6 class="card-title">- UART, SPI, ADC, IC, OC, and Timers</h6>
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--                <div class="mb-3">-->
+<!--                    <input type="quantity" class="form-control" id="exampleFormControlInput1" placeholder="quantity">-->
+<!--                </div>-->
+<!--                <a href="#" class="btn btn-primary">Add Cart</a>-->
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

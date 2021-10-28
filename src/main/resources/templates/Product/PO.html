@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MicrochipsStarApp Service Website</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+
+<div th:insert="fragments/header :: header"></div>
+
+<div class="container">
+    <h1 class="display-6">สั่งสินค้า</h1>
+
+    <form th:action="@{/cart/add}" method="POST">
+
+        <h6>ประเภทสินค้า</h6>
+        <select>
+            <option value="" selected disabled hidden>-------เลือกประเภทสินค้า-------</option>
+            <option value="1">8-bit Microcontrollers</option>
+            <option value="2">16-bit Microcontrollers</option>
+            <option value="3">32-bit Microcontrollers</option>
+        </select>
+
+        <h6>สินค้า</h6>
+        <select>
+            <option value="" selected disabled hidden>-------เลือกสินค้า-------</option>
+            <option value="1">PIC24FJ64GA702-I/SS</option>
+            <option value="2">PIC12F1612-I/P</option>
+            <option value="3">ATTINY202-SSF</option>
+        </select>
+
+        <h6>จำนวน</h6>
+        <div class="mb-3">
+            <input id="exampleFormControlInput" type="quantity" class="form-control" name="quantity" placeholder="quantity">
+        </div>
+
+        <div class="mb-3">
+            <label for="CustomerNameInput" class="form-label">Name</label>
+            <input id="CustomerNameInput" type="text" class="form-control" name="name_PO" placeholder="name">
+        </div>
+
+        <div class="mb-3">
+            <label for="addressInput" class="form-label">ที่อยู่</label>
+            <input id="addressInput" type="text" class="form-control" name="address_PO" placeholder="ที่อยู่">
+        </div>
+
+        <div class="mb-3">
+            <label for="EmailInput" class="form-label">Email</label>
+            <input id="EmailInput" type="text" class="form-control" name="email_PO" placeholder="email">
+        </div>
+
+        <div class="mb-3">
+            <label for="TelephoneNumberInput" class="form-label">TelephoneNumber</label>
+            <input id="TelephoneNumberInput" type="text" class="form-control" name="telephone_PO" placeholder="telephone Number">
+        </div>
+
+        <button type="submit" class="btn btn-primary">ยืนยัน</button>
+    </form>
+</div>
+
+
+
+
+
+</body>
+</html>

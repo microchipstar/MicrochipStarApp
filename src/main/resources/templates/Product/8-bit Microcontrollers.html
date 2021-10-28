@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>8-bit Microcontrollers</title>
+    <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div th:insert="fragments/header :: header"></div>
+<h1>8-bit Microcontrollers</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4" style="width: 95rem;">
+    <div class="col">
+        <div class="card h-100" >
+            <img src="https://www.microchip.com/_images/ics/medium-PIC24FJ64GA702-SSOP-28.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">PIC24FJ64GA702-I/SS</h5>
+
+                <h6 class="card-title">Order Quantity/USD per Unit</h6>
+                <h6 class="card-title">1-24/$1.44</h6>
+                <h6 class="card-title">25-99/$1.31</h6>
+                <h6 class="card-title">100+/$1.19</h6>
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Product Features
+                </button><br><br>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Product Features</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h6 class="card-title">CPU:</h6>
+                                <h6 class="card-title">- Modified Harvard Architecture</h6>
+                                <h6 class="card-title">- Up to 16 MIPS Operation @ 32 MHz</h6>
+                                <h6 class="card-title">- 8 MHz Internal Oscillator</h6>
+                                <h6 class="card-title">- 96 MHz PLL option</h6>
+                                <h6 class="card-title">- Multiple clock divide options</h6>
+                                <h6 class="card-title">- Fast start-up</h6>
+                                <h6 class="card-title">- 17-Bit x 17-Bit Single-Cycle Hardware Fractional/Integer Multiplier</h6>
+                                <h6 class="card-title">- 32-Bit by 16-Bit Hardware Divider</h6>
+                                <h6 class="card-title">- 16 x 16-Bit Working Register Array</h6>
+                                <h6 class="card-title">- C Compiler Optimized Instruction Set Architecture</h6>
+                                <h6 class="card-title">- Two Address Generation Units for Separate Read and Write Addressing of Data Memory</h6>
+
+                                <h6 class="card-title">Analog Features:</h6>
+                                <h6 class="card-title">- Up to 14-Channel, Software Selectable, 10/12-Bit Analog-to-Digital</h6>
+                                <h6 class="card-title">- Converter:</h6>
+                                <h6 class="card-title">- 12-bit, 200K samples/second conversion rate (single Sample-and-Hold)</h6>
+                                <h6 class="card-title">- Sleep mode operation</h6>
+                                <h6 class="card-title">- Charge pump for operating at lower AVDD</h6>
+                                <h6 class="card-title">- Band gap reference input feature</h6>
+                                <h6 class="card-title">- Windowed threshold compare feature</h6>
+                                <h6 class="card-title">- Auto-scan feature</h6>
+                                <h6 class="card-title">- Three Analog Comparators with Input Multiplexing</h6>
+                                <h6 class="card-title">- LVD Interrupt Above/Below Programmable VLVD Level</h6>
+                                <h6 class="card-title">- Charge Time Measurement Unit (CTMU):</h6>
+                                <h6 class="card-title">- Allows measurement of capacitance and time</h6>
+                                <h6 class="card-title">- Operational in Sleep</h6>
+
+                                <h6 class="card-title">eXtreme Low-Power Features:</h6>
+                                <h6 class="card-title">- Sleep and Idle modes Selectively Shut Down Peripherals and/or Core for Substantial Power Reduction and Fast Wake-up</h6>
+                                <h6 class="card-title">- Doze mode Allows CPU to Run at a Lower Clock Speed than Peripherals</h6>
+                                <h6 class="card-title">- Alternate Clock modes Allow On-the-Fly Switching to a Lower Clock Speed for Selective Power Reduction</h6>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+<!--                <form th:action="@{/cart/add8-bit Microcontrollers}" method="POST">-->
+<!--                    <div class="mb-3">-->
+<!--                        <input id="exampleFormControlInput1" type="quantity" class="form-control" name="Quantity" placeholder="Quantity">-->
+<!--                    </div>-->
+<!--                    <button type="submit" class="btn btn-primary">Add Cart</button>-->
+<!--                </form>-->
+
+            </div>
+
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100" >
+            <img src="https://www.microchip.com/_images/ics/medium-PIC12F1612-PDIP-8.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">PIC12F1612-I/P</h5>
+
+                <h6 class="card-title">Order Quantity/USD per Unit</h6>
+                <h6 class="card-title">1-24/$1.03</h6>
+                <h6 class="card-title">25-99/$0.94</h6>
+                <h6 class="card-title">100+/$0.85</h6>
+
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                    Product Features
+                </button><br><br>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel1">Product Features</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <h6 class="card-title">- Flash Program Memory with self read/write capability</h6>
+                                <h6 class="card-title">- Enhanced Mid-Range Core, Internal 32MHz oscillator</h6>
+                                <h6 class="card-title">- 2 x 24-bit Signal Measurement Timer (SMT)</h6>
+                                <h6 class="card-title">- Analog Comparators</h6>
+                                <h6 class="card-title">- 2 x Capture-Compare-PWM (CCP)</h6>
+                                <h6 class="card-title">- 4 x 10-bit Analog-to-Digital Converter (ADC) with voltage reference</h6>
+                                <h6 class="card-title">- Complementary Waveform Generator (CWG):</h6>
+                                <h6 class="card-title">- Zero Cross Detection (ZCD)</h6>
+                                <h6 class="card-title">- Windowed Watchdog Timer (WWDT)</h6>
+                                <h6 class="card-title">- CRC:  16-bit with DMA</h6>
+                                <h6 class="card-title">- Power-On Reset (POR), Brown-Out Reset (BOR)</h6>
+                                <h6 class="card-title">- In Circuit Serial Programming (ICSP)</h6>
+                                <h6 class="card-title">- Wide Operation Voltage Variant ‘F’ (2.3V – 5.5V)</h6>
+                                <h6 class="card-title">- eXtreme Low Power (XLP) ‘LF’ Variant (1.8V – 3.6V)</h6>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!--                <form th:action="@{/cart/add8-bit Microcontrollers}" method="POST">-->
+<!--                    <div class="mb-3">-->
+<!--                        <input id="exampleFormControlInput2" type="quantity" class="form-control" name="Quantity" placeholder="Quantity">-->
+<!--                    </div>-->
+<!--                    <button type="submit" class="btn btn-primary">Add Cart</button>-->
+<!--                </form>-->
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="col">
+        <div class="card h-100" >
+            <img src="https://www.microchip.com/_images/ics/medium-ATTINY202-SOIC-8.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">ATTINY202-SSF</h5>
+
+                <h6 class="card-title">Order Quantity/USD per Unit</h6>
+                <h6 class="card-title">1-24/$0.44</h6>
+                <h6 class="card-title">25-99/$0.41</h6>
+                <h6 class="card-title">100+/$0.37</h6>
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                    Product Features
+                </button><br><br>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel2">Product Features</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <h6 class="card-title">- 135 instructions</h6>
+                                <h6 class="card-title">- Hardware multiplier</h6>
+                                <h6 class="card-title">- Ultra Low Power (ULP)</h6>
+                                <h6 class="card-title">- Idle</h6>
+                                <h6 class="card-title">- Standby</h6>
+                                <h6 class="card-title">- Power Down</h6>
+                                <h6 class="card-title">- 3 Channels Event System</h6>
+                                <h6 class="card-title">- Configurable Custom Logic (CCL)</h6>
+                                <h6 class="card-title">- 6 Channel 10-bit ADC with Voltage Reference</h6>
+                                <h6 class="card-title">- Comparators</h6>
+                                <h6 class="card-title">- 2x 16-bit Timer (TCA / TCB)</h6>
+                                <h6 class="card-title">- Cyclical Redundancy Check (CRC/SCAN)</h6>
+                                <h6 class="card-title">- Watchdog Timer (WDT)</h6>
+                                <h6 class="card-title">- Power-On Reset (POR)</h6>
+                                <h6 class="card-title">- Brown-Out Detection (BOD)</h6>
+                                <h6 class="card-title">- Single pin programming and debugging interface (UPDI)</h6>
+                                <h6 class="card-title">- Operation Voltage: 1.8V – 5.5V</h6>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!--                <form th:action="@{/cart/add8-bit Microcontrollers}" method="POST">-->
+<!--                    <div class="mb-3">-->
+<!--                        <input id="exampleFormControlInput3" type="quantity" class="form-control" name="Quantity" placeholder="Quantity">-->
+<!--                    </div>-->
+<!--                    <button type="submit" class="btn btn-primary">Add Cart</button>-->
+<!--                </form>-->
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
