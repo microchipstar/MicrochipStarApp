@@ -1,4 +1,4 @@
-package Condos.controller;
+package Condos.models;
 
 public class ModelTable {
 
