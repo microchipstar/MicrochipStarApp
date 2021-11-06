@@ -2,7 +2,7 @@ package Condos.Config;
 
 
 import Condos.services.CustomRestTemplateCustomizer;
-import Condos.services.POService;
+import Condos.services.APIService;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,8 +18,8 @@ public class ComponentConfig {
     }
 
     @Bean
-    public POService service (RestTemplate restTemplate ){
-        return new POService(restTemplate);
+    public APIService service (RestTemplate restTemplate ){
+        return new APIService(restTemplate);
     }
 
     @Bean

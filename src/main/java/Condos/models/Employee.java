@@ -1,15 +1,20 @@
 package Condos.models;
 
 
-
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
 public class Employee {
+    private int idM;
     private String nameM;
     private String usernameM;
     private String passwordM;
+
+
+
+    public Employee(int idM, String nameM, String usernameM, String passwordM) {
+        this.idM = idM;
+        this.nameM = nameM;
+        this.usernameM = usernameM;
+        this.passwordM = passwordM;
+    }
 
     public Employee(String nameM, String usernameM, String passwordM) {
         this.nameM = nameM;
@@ -17,67 +22,47 @@ public class Employee {
         this.passwordM = passwordM;
     }
 
+    public int getIdM() {
+        return idM;
+    }
+
+    public void setIdM(int idM) {
+        this.idM = idM;
+    }
+
     public Employee() {
     }
 
-//    public boolean check(String username, String password){
-//        DatabaseConnection connectionNow = new DatabaseConnection();
-//        Connection connectionDB = connectionNow.getConnection();
-//
-//        String connectQuery = "SELECT * FROM microchipapp.employees";
-//        String connectQueryRole = "";
-//
-//        try {
-//            Statement statement = connectionDB.createStatement();
-//            ResultSet queryOutPut = statement.executeQuery(connectQuery);
-//            while (queryOutPut.next()){
-//                if (username.equals(queryOutPut.getString("username_e")) && password.equals(queryOutPut.getString("password_e"))){
-//                    return true;
-//                }
-//            }
-//        } catch (Exception e){
-//            e.printStackTrace();
+    public String getNameM() {
+        return nameM;
+    }
+
+    public void setNameM(String nameM) {
+        this.nameM = nameM;
+    }
+
+    public String getUsernameM() {
+        return usernameM;
+    }
+
+    public void setUsernameM(String usernameM) {
+        this.usernameM = usernameM;
+    }
+
+    public String getPasswordM() {
+        return passwordM;
+    }
+
+    public void setPasswordM(String passwordM) {
+        this.passwordM = passwordM;
+    }
+
+
+//    public boolean entryCheck(String username,String password){
+//        if(usernameM.equals(username)) {
+//            if(passwordM.equals(password)) return true;
+//            else throw new IllegalArgumentException("Wrong password.");
 //        }
 //        return false;
-//    }
-//
-//    public boolean checkUsername(String username){
-//        DatabaseConnection connectionNow = new DatabaseConnection();
-//        Connection connectionDB = connectionNow.getConnection();
-//
-//        String connectQuery = "SELECT * FROM microchipapp.employees";
-//        String connectQueryRole = "";
-//
-//        try {
-//            Statement statement = connectionDB.createStatement();
-//            ResultSet queryOutPut = statement.executeQuery(connectQuery);
-//            while (queryOutPut.next()){
-//                if (username.equals(queryOutPut.getString("username_e"))){
-//                    return false;
-//                }
-//            }
-//        } catch (Exception e){
-//            e.printStackTrace();
-//        }
-//        return true;
-//    }
-//
-//    public void registerEmployee(String name,String username, String password){
-//        DatabaseConnection connectionNow = new DatabaseConnection();
-//        Connection connectionDB = connectionNow.getConnection();
-//
-//        String insertFields = "INSERT INTO microchipapp.employees (name_e, username_e,password_e) VALUES ('";
-//        String insertValues = name + "','" + username + "','" + password + "')";
-//        String insertToRegister = insertFields + insertValues;
-//
-//        try {
-//            Statement statement = connectionDB.createStatement();
-//            statement.executeUpdate(insertToRegister);
-//
-//
-//        }catch (Exception e){
-//            e.printStackTrace();
-//            e.getCause();
-//        }
 //    }
 }
