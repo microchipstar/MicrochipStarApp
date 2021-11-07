@@ -81,6 +81,8 @@ public class POController implements Initializable {
 
     public void initialize(URL url, ResourceBundle resourceBundle){
         poModel = new POModel();
+        poService = new POService();
+
         confirmButton.setDisable(true);
         evidenceButton.setDisable(true);
         confirmButton.setDisable(true);
@@ -229,7 +231,7 @@ public class POController implements Initializable {
         }else if (!isNumeric(quantity.getText())){
             error.setText("กรุณากรอกข้อมูลให้ถูกต้อง");
         }else {
-            //if (poService.checkProduct(Integer.parseInt(quantity.getText()),poModel.getPn_PO())){
+            if (poService.checkProduct(Integer.parseInt(quantity.getText()),poModel.getPn_PO())){
 //            ChoiceProductName.setItems(;);
 //            String productName = ChoiceProductName.getValue();
 //            int price = Integer.parseInt(quantity.getText());
@@ -250,15 +252,19 @@ public class POController implements Initializable {
             apiService.addPO(poModel);
 
             for (Product p : apiService.getP()){
-                if (poModel.getPn_PO().equals(p.getName_P())){
-                    if (poModel.getQuantity_PO() < p.getQuantity_P()){
-                        int q = p.getQuantity_P() - poModel.getQuantity_PO();
-                        System.out.println(q);
-                        p.increaseStock(q);
-                        System.out.println(p.getQuantity_P());
-//                        apiService.updateP(p);
-                    }
-                }
+                Product stock = apiService.getProductByPName(p.getId_P());
+                stock.increaseStock(p.getQuantity_P());
+                System.out.println(stock.getQuantity_P());
+//                apiService.updateProduct(stock);
+//                if (poModel.getPn_PO().equals(p.getName_P())){
+//                    if (poModel.getQuantity_PO() < p.getQuantity_P()){
+//                        int q = p.getQuantity_P() - poModel.getQuantity_PO();
+//                        System.out.println(q);
+//                        p.increaseStock(q);
+//                        System.out.println(p.getQuantity_P());
+////                        apiService.updateP(p);
+//                    }
+//                }
 
             }
 //            poService.buyProduce(poModel.getName_PO(), poModel.getPhone_PO(),poModel.getEmail_PO() ,poModel.getAddress_PO(),
@@ -285,7 +291,7 @@ public class POController implements Initializable {
 //                    } catch (Exception e) {
 //                        e.printStackTrace();
 //                    }
-//                clearDetail();
+                clearDetail();
                 error.setText("ยืนยันการสั่งซื้อ");
 //            Button b = (Button) event.getSource();
 //            Stage stage = (Stage) b.getScene().getWindow();
@@ -294,10 +300,10 @@ public class POController implements Initializable {
 //            stage.setTitle("MicrochipStarApp!");
 //            stage.show();
 
-//        }else {
-//                error.setText("สินค้าไม่พอ");
-//
-//            }
+        }else {
+                error.setText("สินค้าไม่พอ");
+
+            }
         }
 
     }
@@ -365,7 +371,7 @@ public class POController implements Initializable {
             error.setText("กรุณากรอกข้อมูลให้ถูกต้อง");
             return false;
         } else {
-            //if (poService.checkProduct(Integer.parseInt(quantity.getText()),poModel.getPn_PO())){
+            if (poService.checkProduct(Integer.parseInt(quantity.getText()),poModel.getPn_PO())){
             nameText.setText(poModel.getPn_PO());
             summaryShowAddressText.setText(address.getText());
             summaryShowMailLabel.setText(email.getText());
@@ -414,9 +420,9 @@ public class POController implements Initializable {
 //                e.printStackTrace();
 //                return false;
 //            }
-//            }else {
-//                error.setText("สินค้าไม่พอ");
-//            }
+            }else {
+                error.setText("สินค้าไม่พอ");
+            }
 return false;
         }
     }

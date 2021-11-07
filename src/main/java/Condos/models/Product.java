@@ -66,7 +66,7 @@ public class Product {
 
     public void increaseStock(int quantity){
         if(quantity >0){
-            quantity_P = quantity;
+            quantity_P -= quantity;
         }
     }
 
