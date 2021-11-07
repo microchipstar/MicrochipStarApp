@@ -1,3 +1,5 @@
+package Condos.controller;
+
 //package Condos.controller;
 //
 //
@@ -35,6 +37,9 @@
 //import java.util.logging.Logger;
 //
 //public class ProductSearchController implements Initializable {
+    public class ProductSearchController {
+
+}
 //
 //    private Product selectedProduct;
 //    private Product productDetail;

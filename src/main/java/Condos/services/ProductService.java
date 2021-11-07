@@ -1,9 +1,19 @@
 package Condos.services;
 
+import Condos.Config.ComponentConfig;
 import Condos.models.Product;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class ProductService {
     private Product product;
+    private APIService apiService;
+
+    public ProductService() {
+        ApplicationContext context = new AnnotationConfigApplicationContext(ComponentConfig.class);
+        apiService = context.getBean(APIService.class);
+    }
+
     //    public void addProduct(String idProduct,String nameProduct,float price,String imagePath,int quantity) {
 //        DatabaseConnection connectionNows = new DatabaseConnection();
 //        Connection connectDB = connectionNows.getConnection();
@@ -44,7 +54,22 @@ public class ProductService {
 //        }
 //
 //    }
-//    public boolean checkProduct(String idProduct, String nameProduct, String imagePath){
+    public boolean checkProduct(String idProduct, String nameProduct, String imagePath){
+        for (Product p : apiService.getP()){
+            if (idProduct.equals(p.getId_P())){
+//                    System.out.println("1");
+                    return true;
+                }
+                if(nameProduct.equals(p.getName_P())){
+//                    System.out.println("2");
+                    return true;
+                }
+                if (imagePath.equals(p.getImage_P())){
+//                    System.out.println("3");
+                    return true;
+                }
+        }
+
 //        DatabaseConnection connectionNow = new DatabaseConnection();
 //        Connection connectionDB = connectionNow.getConnection();
 //        String connectQuery = "SELECT * FROM microchipapp.product";
@@ -69,9 +94,9 @@ public class ProductService {
 //        } catch (Exception e){
 //            e.printStackTrace();
 //        }
-////        System.out.println("4");
-//        return false;
-//    }
+//        System.out.println("4");
+        return false;
+    }
 
 //    public String lastActiveTime(){
 //        LocalDateTime lastActiveTime = LocalDateTime.now();
