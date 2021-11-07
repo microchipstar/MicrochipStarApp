@@ -14,6 +14,23 @@ public class ProductService {
         apiService = context.getBean(APIService.class);
     }
 
+
+//    public boolean checkProduct(int quantity_PO , String namePro){
+//        for (Product p : apiService.getP()){
+//            if (namePro.equals(p.getName_P())){
+//                if (quantity_PO < p.getQuantity_P()){
+//                    System.out.println("1");
+//                    return true;
+//                }
+//                else {
+//                    System.out.println("2");
+//                    return false;
+//                }
+//            }
+//        }
+//        return false;
+//    }
+
     //    public void addProduct(String idProduct,String nameProduct,float price,String imagePath,int quantity) {
 //        DatabaseConnection connectionNows = new DatabaseConnection();
 //        Connection connectDB = connectionNows.getConnection();
@@ -32,28 +49,27 @@ public class ProductService {
 //            e.printStackTrace();
 //            e.getCause();
 //        }}
-//    public boolean isInt(String str) {
-//
-//        try {
-//            @SuppressWarnings("unused")
-//            int x = Integer.parseInt(str);
-//            return true; //String is an Integer
-//        } catch (NumberFormatException e) {
-//            return false; //String is not an Integer
-//        }
-//
-//    }
-//    public boolean isFloat(String str) {
-//
-//        try {
-//            @SuppressWarnings("unused")
-//            float x = Float.parseFloat(str);
-//            return true; //String is an Integer
-//        } catch (NumberFormatException e) {
-//            return false; //String is not an Integer
-//        }
-//
-//    }
+    public boolean isInt(String str) {
+
+        try {
+            @SuppressWarnings("unused")
+            int x = Integer.parseInt(str);
+            return true; //String is an Integer
+        } catch (NumberFormatException e) {
+            return false; //String is not an Integer
+        }
+
+    }
+    public boolean isFloat(String str) {
+
+        try {
+            @SuppressWarnings("unused")
+            float x = Float.parseFloat(str);
+            return true; //String is an Integer
+        } catch (NumberFormatException e) {
+            return false; //String is not an Integer
+        }
+    }
     public boolean checkProduct(String idProduct, String nameProduct, String imagePath){
         for (Product p : apiService.getP()){
             if (idProduct.equals(p.getId_P())){

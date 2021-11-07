@@ -115,7 +115,8 @@ public class POService {
 //
     public boolean checkProduct(int quantity_PO , String namePro){
         for (Product p : apiService.getP()){
-            if (quantity_PO < p.getQuantity_P()){
+            if (namePro.equals(p.getName_P())){
+                if (quantity_PO < p.getQuantity_P()){
                     System.out.println("1");
                     return true;
                 }
@@ -123,6 +124,7 @@ public class POService {
                     System.out.println("2");
                     return false;
                 }
+            }
         }
         return false;
     }

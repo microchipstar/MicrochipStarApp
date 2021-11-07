@@ -90,4 +90,16 @@ public class APIService {
         String url = "http://localhost:8091/Product";
         restTemplate.put(url,order,Product.class);
     }
+
+    public Product getProductByPName(String pName){
+        String url = "http://localhost:8091/Product";
+        ResponseEntity<Product> response = restTemplate.getForEntity(url+"/"+pName, Product.class);
+        Product product = response.getBody();
+        return product;
+    }
+
+    public void updateProduct(Product product){
+        String url = "http://localhost:8091/Product";
+        restTemplate.put(url+"/"+ product.getName_P(), product, Product.class);
+    }
 }
