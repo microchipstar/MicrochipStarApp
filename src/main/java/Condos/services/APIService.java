@@ -80,7 +80,13 @@ public class APIService {
         restTemplate.postForObject(url, cart, Product.class);
     }
 
-    public void updateP(Product order){
+//    public void updateP(Product order){
+//        String url = "http://localhost:8091/Product";
+//        restTemplate.put(url,order,Product.class);
+//    }
+
+
+    public void updateP(Product order) {
         String url = "http://localhost:8091/Product";
         restTemplate.put(url,order,Product.class);
     }

@@ -30,6 +30,7 @@ public class testText {
         }else {
             System.out.println("ไม่มี");
         }
+        System.out.println(employeeService.getDatazz());
 //        employeeService = new EmployeeService();
 //        employee = new Employee();
 //        ApplicationContext context = new AnnotationConfigApplicationContext(ComponentConfig.class);
@@ -38,17 +39,21 @@ public class testText {
 //            System.out.println(service.getE().get(i).getIdM());
 //        }
 //        System.out.println(service.getE().get(0).getIdM());
-//        String url = "http://localhost:8091/PO";
+        restTemplate = new RestTemplate();
+        String url = "http://localhost:8091/Product/" + "16B";
 //        ResponseEntity<POModel[]> response =
 //                restTemplate.getForEntity(url, POModel[].class);
 //        POModel[] carts = response.getBody();
-//        for (int i = 0; i < carts.length;i++){
-//            System.out.println(i);
-//        }
+
+//        System.out.println(carts);
+////        System.out.println(carts);
+////        for (int i = 0; i < carts.length;i++){
+////            System.out.println(i);
+////        }
 //        for (POModel c: carts) {
 //            System.out.println(c.getEmail_PO());
 //        }
-//
+////
 //        String responseEntity = restTemplate.getForObject(url,String.class);
 //
 //            System.out.println(responseEntity);

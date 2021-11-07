@@ -1,11 +1,23 @@
 package Condos.services;
 
+import Condos.Config.ComponentConfig;
 import Condos.models.POModel;
+import Condos.models.Product;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class POService {
     private POModel poModel;
+    private APIService apiService;
 
-    //    public void buyProduce(String name,String phone,String email,String address, String pn, int quantity,float tp,String evidence,String date){
+    public POService() {
+        ApplicationContext context = new AnnotationConfigApplicationContext(ComponentConfig.class);
+        apiService = context.getBean(APIService.class);
+    }
+
+    public void buyProduce(String name, String phone, String email, String address, String pn, int quantity, float tp, String evidence, String date){
+        poModel = new POModel(name, phone, email, address, pn, quantity, tp, evidence, date,"ยืนยันการสั่งซื้อ");
+        apiService.addPO(poModel);
 //        DatabaseConnection connectionNow = new DatabaseConnection();
 //        Connection connectionDB = connectionNow.getConnection();
 //
@@ -22,9 +34,10 @@ public class POService {
 //            e.printStackTrace();
 //            e.getCause();
 //        }
-//    }
+    }
 //
-//    public void changeStatus(int id,String status,String statusText){
+    public void changeStatus(int id,String status){
+//        apiService.updatePO(id,status);
 //        DatabaseConnection connectionNow = new DatabaseConnection();
 //        Connection connectionDB = connectionNow.getConnection();
 //
@@ -45,7 +58,7 @@ public class POService {
 //            e.printStackTrace();
 //            e.getCause();
 //        }
-//    }
+    }
 //
 //
 //    public void update(int priceDB,int quantity_PO,String id) {
@@ -100,7 +113,19 @@ public class POService {
 //
 ////    }
 //
-//    public boolean checkProduct(int quantity_PO , String namePro){
+    public boolean checkProduct(int quantity_PO , String namePro){
+        for (Product p : apiService.getP()){
+            if (quantity_PO < p.getQuantity_P()){
+                    System.out.println("1");
+                    return true;
+                }
+                else {
+                    System.out.println("2");
+                    return false;
+                }
+        }
+        return false;
+    }
 //        DatabaseConnection connectionNow = new DatabaseConnection();
 //        Connection connectionDB = connectionNow.getConnection();
 //        String connectQuery = "SELECT all_quantity_P FROM microchipapp.product WHERE name_P = '" + namePro + "'";

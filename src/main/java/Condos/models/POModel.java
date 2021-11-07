@@ -36,6 +36,19 @@ public class POModel {
         this.status_PO = status_PO;
     }
 
+    public POModel(String name_PO, String phone_PO, String email_PO, String address_PO, String pn_PO, int quantity_PO, float total_price_PO, String evidence_PO, String date_PO, String status_PO) {
+        this.name_PO = name_PO;
+        this.phone_PO = phone_PO;
+        this.email_PO = email_PO;
+        this.address_PO = address_PO;
+        this.pn_PO = pn_PO;
+        this.quantity_PO = quantity_PO;
+        this.total_price_PO = total_price_PO;
+        this.evidence_PO = evidence_PO;
+        this.date_PO = date_PO;
+        this.status_PO = status_PO;
+    }
+
     public int getId_PO() {
         return id_PO;
     }
