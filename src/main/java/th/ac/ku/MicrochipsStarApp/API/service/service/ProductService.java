@@ -3,12 +3,10 @@ package th.ac.ku.MicrochipsStarApp.API.service.service;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
-import th.ac.ku.MicrochipsStarApp.API.service.model.Message;
 import th.ac.ku.MicrochipsStarApp.API.service.model.Product;
 import th.ac.ku.MicrochipsStarApp.API.service.repository.ProductRepository;
 
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class ProductService {
@@ -34,6 +32,7 @@ public class ProductService {
     public Product update(int id, Product requestBody)
     {
         Product record = repository.findById(id).get();
+        record.setNo_P(requestBody.getNo_P());
         record.setName_P(requestBody.getName_P());
         record.setId_P(requestBody.getId_P());
         record.setImage_P(requestBody.getImage_P());

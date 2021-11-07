@@ -1,17 +1,17 @@
 package th.ac.ku.MicrochipsStarApp.API.service.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 @Entity
 public class Product {
-    @Id
-    @Column(name="id_P")
-    private String id_P;//8B01,8B02..,16B01,16B01
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int no_P;
+
+    private String id_P;//8B01,8B02..,16B01,16B01
     private String name_P;
     private float price_P;
     private int quantity_P;
@@ -27,6 +27,15 @@ public class Product {
 //        this.quantity_P = quantity_P;
 //        this.image_P = image_P;
 //    }
+
+
+    public int getNo_P() {
+        return no_P;
+    }
+
+    public void setNo_P(int no_P) {
+        this.no_P = no_P;
+    }
 
     public String getId_P() {
         return id_P;
