@@ -27,17 +27,17 @@ public class employeeController {
     }
 
     @GetMapping("/{id}")
-    public employee getCart(@PathVariable UUID id) {
+    public employee getCart(@PathVariable int id) {
         return service.getE(id);
     }
 
     @PutMapping("/{id}")
-    public employee update(@PathVariable UUID id, @RequestBody employee employee) {
+    public employee update(@PathVariable int id, @RequestBody employee employee) {
         return service.updateE(id, employee);
     }
 
     @DeleteMapping("/{id}")
-    public employee delete(@PathVariable UUID id) {
+    public employee delete(@PathVariable int id) {
         return service.deleteE(id);
     }
 }

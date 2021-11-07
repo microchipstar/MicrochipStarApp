@@ -10,6 +10,7 @@ import th.ac.ku.MicrochipsStarApp.API.service.repository.ProductRepository;
 import java.util.List;
 import java.util.UUID;
 
+@Service
 public class ProductService {
     @Autowired
     private ProductRepository repository;

@@ -4,6 +4,7 @@ import org.hibernate.annotations.Type;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.UUID;
 
@@ -11,23 +12,26 @@ import java.util.UUID;
 public class PO {
 
     @Id
-    @GeneratedValue(generator = "UUID")
-    @Type(type = "org.hibernate.type.UUIDCharType")
-    private UUID ID_PO;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id_PO;
 
     private String name_PO;
-    private String address_PO;
+    private String phone_PO;
     private String email_PO;
-    private String telephone_PO;
-    private int quantity;
-    private String productName_PO;
+    private String address_PO;
+    private String pn_PO;
+    private int quantity_PO;
+    private  float total_price_PO;
+    private String evidence_PO;
+    private String date_PO;
+    private String status_PO;
 
-    public UUID getID_PO() {
-        return ID_PO;
+    public int getId_PO() {
+        return id_PO;
     }
 
-    public void setID_PO(UUID ID_PO) {
-        this.ID_PO = ID_PO;
+    public void setId_PO(int id_PO) {
+        this.id_PO = id_PO;
     }
 
     public String getName_PO() {
@@ -38,12 +42,12 @@ public class PO {
         this.name_PO = name_PO;
     }
 
-    public String getAddress_PO() {
-        return address_PO;
+    public String getPhone_PO() {
+        return phone_PO;
     }
 
-    public void setAddress_PO(String address_PO) {
-        this.address_PO = address_PO;
+    public void setPhone_PO(String phone_PO) {
+        this.phone_PO = phone_PO;
     }
 
     public String getEmail_PO() {
@@ -54,27 +58,59 @@ public class PO {
         this.email_PO = email_PO;
     }
 
-    public String getTelephone_PO() {
-        return telephone_PO;
+    public String getAddress_PO() {
+        return address_PO;
     }
 
-    public void setTelephone_PO(String telephone_PO) {
-        this.telephone_PO = telephone_PO;
+    public void setAddress_PO(String address_PO) {
+        this.address_PO = address_PO;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public String getPn_PO() {
+        return pn_PO;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setPn_PO(String pn_PO) {
+        this.pn_PO = pn_PO;
     }
 
-    public String getProductName_PO() {
-        return productName_PO;
+    public int getQuantity_PO() {
+        return quantity_PO;
     }
 
-    public void setProductName_PO(String productName_PO) {
-        this.productName_PO = productName_PO;
+    public void setQuantity_PO(int quantity_PO) {
+        this.quantity_PO = quantity_PO;
+    }
+
+    public float getTotal_price_PO() {
+        return total_price_PO;
+    }
+
+    public void setTotal_price_PO(float total_price_PO) {
+        this.total_price_PO = total_price_PO;
+    }
+
+    public String getEvidence_PO() {
+        return evidence_PO;
+    }
+
+    public void setEvidence_PO(String evidence_PO) {
+        this.evidence_PO = evidence_PO;
+    }
+
+    public String getDate_PO() {
+        return date_PO;
+    }
+
+    public void setDate_PO(String date_PO) {
+        this.date_PO = date_PO;
+    }
+
+    public String getStatus_PO() {
+        return status_PO;
+    }
+
+    public void setStatus_PO(String status_PO) {
+        this.status_PO = status_PO;
     }
 }

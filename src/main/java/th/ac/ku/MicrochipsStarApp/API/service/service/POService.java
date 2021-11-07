@@ -22,11 +22,11 @@ public class POService {
         return po;
     }
 
-    public PO getPO(UUID id) {
+    public PO getPO(int id) {
         return repository.findById(id).get();
     }
 
-    public PO updatePO(UUID id, PO requestBody) {
+    public PO updatePO(int id, PO requestBody) {
         PO record = repository.findById(id).get();
         if (requestBody.getName_PO() != null)
             record.setName_PO(requestBody.getName_PO());
@@ -37,22 +37,35 @@ public class POService {
         if (requestBody.getEmail_PO() != null)
             record.setEmail_PO(requestBody.getEmail_PO());
 
-        if (requestBody.getTelephone_PO() != null)
-            record.setTelephone_PO(requestBody.getTelephone_PO());
+        if (requestBody.getStatus_PO() != null)
+            record.setStatus_PO(requestBody.getStatus_PO());
 
-        if (requestBody.getProductName_PO() != null)
-            record.setProductName_PO(requestBody.getProductName_PO());
+        if (requestBody.getDate_PO() != null)
+            record.setDate_PO(requestBody.getDate_PO());
 
-        if (requestBody.getQuantity() > 0)
-            record.setQuantity(requestBody.getQuantity());
+        if (requestBody.getPhone_PO() != null)
+            record.setPhone_PO(requestBody.getPhone_PO());
+
+        if (requestBody.getPn_PO() != null)
+            record.setPn_PO(requestBody.getPn_PO());
+
+        if (requestBody.getEvidence_PO() != null)
+            record.setEvidence_PO(requestBody.getEvidence_PO());
 
 
+        if (requestBody.getQuantity_PO() > 0)
+            record.setQuantity_PO(requestBody.getQuantity_PO());
+
+        if (requestBody.getId_PO() > 0)
+            record.setId_PO(requestBody.getId_PO());
+
+        record.setTotal_price_PO(requestBody.getTotal_price_PO());
         PO r = repository.save(record);
 
         return r;
     }
 
-    public PO deletePO(UUID id) {
+    public PO deletePO(int id) {
         PO record = repository.findById(id).get();
         repository.deleteById(id);
         return record;

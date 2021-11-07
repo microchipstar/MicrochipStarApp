@@ -4,6 +4,7 @@ import org.hibernate.annotations.Type;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.UUID;
 
@@ -11,54 +12,43 @@ import java.util.UUID;
 public class employee {
 
     @Id
-    @GeneratedValue(generator = "UUID")
-    @Type(type = "org.hibernate.type.UUIDCharType")
-    private UUID ID_E;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int ID_E;
 
-    private String Username_E;
-    private String Password_E;
-    private String email_E;
-    private String Name_E;
+    private String nameM;
+    private String usernameM;
+    private String passwordM;
 
 
-    public UUID getID_E() {
+    public int getID_E() {
         return ID_E;
     }
 
-    public void setID_E(UUID ID_E) {
+    public void setID_E(int ID_E) {
         this.ID_E = ID_E;
     }
 
-    public String getUsername_E() {
-        return Username_E;
+    public String getNameM() {
+        return nameM;
     }
 
-    public void setUsername_E(String username_E) {
-        Username_E = username_E;
+    public void setNameM(String nameM) {
+        this.nameM = nameM;
     }
 
-    public String getPassword_E() {
-        return Password_E;
+    public String getUsernameM() {
+        return usernameM;
     }
 
-    public void setPassword_E(String password_E) {
-        Password_E = password_E;
+    public void setUsernameM(String usernameM) {
+        this.usernameM = usernameM;
     }
 
-    public String getEmail_E() {
-        return email_E;
+    public String getPasswordM() {
+        return passwordM;
     }
 
-    public void setEmail_E(String email_E) {
-        this.email_E = email_E;
+    public void setPasswordM(String passwordM) {
+        this.passwordM = passwordM;
     }
-
-    public String getName_E() {
-        return Name_E;
-    }
-
-    public void setName_E(String name_E) {
-        Name_E = name_E;
-    }
-
 }

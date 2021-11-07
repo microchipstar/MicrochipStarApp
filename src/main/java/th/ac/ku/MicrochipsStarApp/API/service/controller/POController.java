@@ -25,17 +25,17 @@ public class POController {
     }
 
     @GetMapping("/{id}")
-    public PO getCart(@PathVariable UUID id) {
+    public PO getCart(@PathVariable int id) {
         return service.getPO(id);
     }
 
     @PutMapping("/{id}")
-    public PO update(@PathVariable UUID id, @RequestBody PO cart) {
+    public PO update(@PathVariable int id, @RequestBody PO cart) {
         return service.updatePO(id, cart);
     }
 
     @DeleteMapping("/{id}")
-    public PO delete(@PathVariable UUID id) {
+    public PO delete(@PathVariable int id) {
         return service.deletePO(id);
     }
 

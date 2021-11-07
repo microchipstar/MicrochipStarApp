@@ -7,5 +7,5 @@ import th.ac.ku.MicrochipsStarApp.API.service.model.PO;
 import java.util.UUID;
 
 @Repository
-public interface PORepository extends JpaRepository<PO, UUID> {
+public interface PORepository extends JpaRepository<PO, Integer> {
 }

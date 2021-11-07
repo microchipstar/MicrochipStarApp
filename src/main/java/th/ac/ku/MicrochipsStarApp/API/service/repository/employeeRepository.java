@@ -8,5 +8,5 @@ import th.ac.ku.MicrochipsStarApp.API.service.model.employee;
 import java.util.UUID;
 
 @Repository
-public interface employeeRepository extends JpaRepository<employee, UUID> {
+public interface employeeRepository extends JpaRepository<employee, Integer> {
 }

@@ -25,31 +25,29 @@ public class employeeService {
         return employee;
     }
 
-    public employee getE(UUID id) {
+    public employee getE(int id) {
         return repository.findById(id).get();
     }
 
-    public employee updateE(UUID id, employee requestBody) {
+    public employee updateE(int id, employee requestBody) {
         employee record = repository.findById(id).get();
-        if (requestBody.getUsername_E() != null)
-            record.setUsername_E(requestBody.getUsername_E());
+        if (requestBody.getUsernameM() != null)
+            record.setUsernameM(requestBody.getUsernameM());
 
-        if (requestBody.getPassword_E() != null)
-            record.setPassword_E(requestBody.getPassword_E());
+        if (requestBody.getPasswordM() != null)
+            record.setPasswordM(requestBody.getPasswordM());
 
-        if (requestBody.getName_E() != null)
-            record.setName_E(requestBody.getName_E());
+        if (requestBody.getNameM() != null)
+            record.setNameM(requestBody.getNameM());
 
-
-        if (requestBody.getEmail_E() != null)
-            record.setEmail_E(requestBody.getEmail_E());
-
+        if (requestBody.getID_E() > 0)
+            record.setID_E(requestBody.getID_E());
         employee r = repository.save(record);
 
         return r;
     }
 
-    public employee deleteE(UUID id) {
+    public employee deleteE(int id) {
         employee record = repository.findById(id).get();
         repository.deleteById(id);
         return record;
