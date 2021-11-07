@@ -14,37 +14,13 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Condos.controller.POController">
    <children>
-      <ImageView fitHeight="301.0" fitWidth="371.0" layoutX="371.0" layoutY="-4.0">
+      <ImageView fitHeight="600.0" fitWidth="1082.0">
          <image>
-            <Image url="@blackground2.png.jpg" />
+            <Image url="@1.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="301.0" fitWidth="371.0" layoutY="-4.0">
-         <image>
-            <Image url="@blackground2.png.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="313.0" fitWidth="371.0" layoutX="736.0" layoutY="288.0">
-         <image>
-            <Image url="@blackground2.png.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="313.0" fitWidth="371.0" layoutX="371.0" layoutY="288.0">
-         <image>
-            <Image url="@blackground2.png.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="313.0" fitWidth="371.0" layoutY="288.0">
-         <image>
-            <Image url="@blackground2.png.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="301.0" fitWidth="371.0" layoutX="736.0" layoutY="-4.0">
-         <image>
-            <Image url="@blackground2.png.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="145.0" fitWidth="177.0" layoutX="7.0" layoutY="-3.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b9b9b9" height="98.0" layoutX="-9.0" layoutY="-9.0" stroke="#757575" strokeDashOffset="10.0" strokeLineCap="BUTT" strokeLineJoin="BEVEL" strokeType="INSIDE" style="-fx-background-color: red;" width="1091.0" />
+      <ImageView fitHeight="145.0" fitWidth="177.0" layoutX="-10.0" layoutY="-7.0">
          <image>
             <Image url="@LogoMicrochip_-_Copy-removebg-preview.png" />
          </image>
@@ -54,34 +30,34 @@
             <Image url="@../../../../evidence/2021-11-04_1636035795318.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff5db" height="200.0" layoutX="501.0" layoutY="192.0" stroke="#a37700" strokeType="INSIDE" width="568.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="202.0" layoutX="504.0" layoutY="189.0" stroke="BLACK" strokeType="INSIDE" width="568.0" />
       <ImageView fx:id="productView" fitHeight="184.0" fitWidth="234.0" layoutX="260.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff5db" height="502.0" layoutX="26.0" layoutY="98.0" stroke="#a37700" strokeType="INSIDE" width="226.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff5db" height="202.0" layoutX="504.0" layoutY="395.0" stroke="#a37700" strokeType="INSIDE" width="568.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="492.0" layoutX="26.0" layoutY="98.0" stroke="BLACK" strokeType="INSIDE" width="226.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="202.0" layoutX="504.0" layoutY="395.0" stroke="BLACK" strokeType="INSIDE" width="568.0" />
       <TextField fx:id="quantity" layoutX="270.0" layoutY="209.0" promptText="จำนวน" />
       <ChoiceBox fx:id="ChoiceProductName" layoutX="265.0" layoutY="124.0" prefHeight="31.0" prefWidth="213.0" />
       <TextField fx:id="name" layoutX="32.0" layoutY="167.0" promptText="ชื่อ" />
       <TextField fx:id="phone" layoutX="32.0" layoutY="211.0" promptText="เบอร์" />
       <TextField fx:id="email" layoutX="33.0" layoutY="263.0" promptText="อีเมล" />
       <Button fx:id="evidenceButton" layoutX="30.0" layoutY="511.0" mnemonicParsing="false" onAction="#handleUploadButton" text="ใส่หลักฐาน" />
-      <Button fx:id="confirmButton" layoutX="176.0" layoutY="558.0" mnemonicParsing="false" onAction="#buyProductButtonOnAction" prefWidth="61.0" text="ยืนยัน" />
-      <Button fx:id="cancelButton" layoutX="42.0" layoutY="558.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" text="ยกเลิก" />
-      <Label layoutX="339.0" layoutY="83.0" text="สินค้า" textFill="#89620c">
+      <Button fx:id="confirmButton" layoutX="184.0" layoutY="558.0" mnemonicParsing="false" onAction="#buyProductButtonOnAction" prefWidth="61.0" text="ยืนยัน" />
+      <Button fx:id="cancelButton" layoutX="32.0" layoutY="558.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" text="ยกเลิก" />
+      <Label layoutX="265.0" layoutY="93.0" text="สินค้า" textFill="WHITE">
          <font>
             <Font name="System Bold" size="24.0" />
          </font></Label>
-      <Label layoutX="335.0" layoutY="157.0" prefHeight="21.0" prefWidth="83.0" text="จำนวน" textFill="#89620c">
+      <Label layoutX="265.0" layoutY="162.0" prefHeight="21.0" prefWidth="83.0" text="จำนวน" textFill="WHITE">
          <font>
             <Font name="System Bold" size="24.0" />
          </font></Label>
-      <Label layoutX="435.0" layoutY="20.0" text="รายการสินค้า" textFill="#89620c">
+      <Label layoutX="426.0" layoutY="14.0" text="รายการสินค้า">
          <font>
             <Font name="System Bold Italic" size="42.0" />
          </font>
       </Label>
-      <Label layoutX="34.0" layoutY="126.0" prefHeight="27.0" prefWidth="95.0" text="ข้อมูลลูกค้า">
+      <Label layoutX="36.0" layoutY="110.0" prefHeight="28.0" prefWidth="118.0" text="ข้อมูลลูกค้า">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold" size="19.0" />
          </font></Label>
       <TextArea fx:id="address" layoutX="32.0" layoutY="305.0" prefHeight="200.0" prefWidth="200.0" promptText="ที่อยู่" />
       <Label layoutX="510.0" layoutY="347.0" text="ราคารวม :">
@@ -109,52 +85,52 @@
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Label layoutX="531.0" layoutY="198.0" text="ข้อมูลใบสั่งซื้อ">
+      <Label layoutX="509.0" layoutY="198.0" text="ข้อมูลใบสั่งซื้อ">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="955.0" layoutY="410.0" text="ข้อมูลลูกค้า">
+      <Label layoutX="508.0" layoutY="396.0" text="ข้อมูลลูกค้า">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="517.0" layoutY="405.0" text="ชื่อ:">
+      <Label layoutX="510.0" layoutY="437.0" text="ชื่อ:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="511.0" layoutY="444.0" text="เบอร์:">
+      <Label layoutX="511.0" layoutY="471.0" text="เบอร์:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="512.0" layoutY="517.0" text="ที่อยู่:">
+      <Label layoutX="512.0" layoutY="545.0" text="ที่อยู่:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="510.0" layoutY="487.0" text="อีเมล:">
+      <Label layoutX="510.0" layoutY="510.0" text="อีเมล:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="summaryShowNameLabel" layoutX="562.0" layoutY="405.0" prefHeight="27.0" prefWidth="242.0">
+      <Label fx:id="summaryShowNameLabel" layoutX="562.0" layoutY="437.0" prefHeight="27.0" prefWidth="242.0">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="summaryShowPhoneLabel" layoutX="562.0" layoutY="444.0" prefHeight="27.0" prefWidth="242.0">
+      <Label fx:id="summaryShowPhoneLabel" layoutX="562.0" layoutY="471.0" prefHeight="27.0" prefWidth="242.0">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="summaryShowMailLabel" layoutX="562.0" layoutY="487.0" prefHeight="27.0" prefWidth="293.0">
+      <Label fx:id="summaryShowMailLabel" layoutX="562.0" layoutY="510.0" prefHeight="27.0" prefWidth="293.0">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button fx:id="summaryB" layoutX="95.0" layoutY="558.0" mnemonicParsing="false" onAction="#summaryButton" text="สรุปรายการ" />
+      <Button fx:id="summaryB" layoutX="98.0" layoutY="558.0" mnemonicParsing="false" onAction="#summaryButton" text="สรุปรายการ" />
       <Label fx:id="nameText" layoutX="580.0" layoutY="241.0" prefHeight="46.0" prefWidth="426.0">
          <font>
             <Font size="18.0" />
@@ -163,7 +139,7 @@
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Text fx:id="summaryShowAddressText" layoutX="564.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="377.6708984375">
+      <Text fx:id="summaryShowAddressText" layoutX="562.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="377.6708984375">
          <font>
             <Font size="18.0" />
          </font>
