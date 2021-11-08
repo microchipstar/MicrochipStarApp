@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+
+  docker-mysql:
+    container_name: docker-mysql
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: microchipapp
+      MYSQL_ROOT_PASSWORD:
+    expose:
+      - 3306
+    ports:
+      - 3307:3306
+    networks:
+      - bank-network
+    restart: always
+
+  microchip-api:
+    restart: on-failure
+    container_name: microchip-api
+    build:
+      context: .
+      dockerfile: microchip-api.dockerfile
+    image: microchip-api:latest
+    expose:
+      - 8091
+    ports:
+      - 8091:8091
+    networks:
+      - bank-network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/microchipapp
+    depends_on:
+      - docker-mysql
+
+networks:
+  bank-network:
+    driver: bridge
