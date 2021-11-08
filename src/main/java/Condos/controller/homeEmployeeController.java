@@ -4,13 +4,9 @@ import Condos.Config.ComponentConfig;
 import Condos.models.Employee;
 import Condos.models.POModel;
 import Condos.services.APIService;
-import Condos.services.DataListSourceBox;
-import Condos.services.EmployeeList;
 import Condos.services.EmployeeService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.collections.transformation.FilteredList;
-import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,14 +22,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class homeEmployeeController implements Initializable {
 
@@ -62,9 +51,7 @@ public class homeEmployeeController implements Initializable {
 
 
     private ObservableList<POModel> dataObservableList;
-    private DataListSourceBox dataSource;
     private EmployeeService employeeService;
-    private EmployeeList BoxLists;
     private Employee employee;
     private APIService apiService;
     @Override

@@ -16,13 +16,14 @@ import java.util.List;
 
 public class EmployeeService {
     private APIService apiService;
-    private EmployeeList employeeList;
+    private Employee employee;
     @Autowired
     private RestTemplate restTemplate = new RestTemplate();
 
     public EmployeeService() {
         ApplicationContext context = new AnnotationConfigApplicationContext(ComponentConfig.class);
         apiService = context.getBean(APIService.class);
+        employee = new Employee();
     }
 
     public List<Employee> getE() {
@@ -34,30 +35,18 @@ public class EmployeeService {
         return Arrays.asList(carts);
     }
 
-    public void readData(){
-        String url = "http://localhost:8091/employee";
-        ResponseEntity<Employee[]> response =
-                restTemplate.getForEntity(url, Employee[].class);
-        Employee[] carts = response.getBody();
-        for (Employee e : carts){
-            employeeList.addItem(e);
-            System.out.println(e.getUsernameM());
-        }
-    }
 
-    public EmployeeList getDatazz() {
-        employeeList = new EmployeeList();
-        readData();
-        return employeeList;
-    }
 
     public boolean check(String username,String password) {
         String url = "http://localhost:8091/employee";
         ResponseEntity<Employee[]> response =
                 restTemplate.getForEntity(url, Employee[].class);
         Employee[] carts = response.getBody();
+        if (employee.getUsernameM().equals(username) && employee.getPasswordM().equals(password)){
+            return true;
+        }
         for (Employee e: carts) {
-            if (e.getUsernameM().equals(username) && e.getPasswordM().equals(password)){
+            if ((e.getUsernameM().equals(username) && e.getPasswordM().equals(password))){
                 return true;
             }
         }
@@ -65,6 +54,9 @@ public class EmployeeService {
     }
 
     public boolean checkUsername(String username){
+        if (employee.getUsernameM().equals(username)){
+            return false;
+        }
         for (Employee e : apiService.getE()){
             if (username.equals(e.getUsernameM())){
                 return false;

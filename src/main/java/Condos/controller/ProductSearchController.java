@@ -42,7 +42,7 @@ import java.time.LocalDate;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-//
+
 public class ProductSearchController implements Initializable {
 
 
@@ -69,8 +69,7 @@ public class ProductSearchController implements Initializable {
     private Label warning,editWarning;
     @FXML
     private TextField idPro_Field, namePro_Field, pricePro_Field, quantityPro_Field,imagePro_Field;
-//    @FXML
-//    private Text imagePro_Text;
+
     @FXML
     private Button inQuantity_Button, addProduct_Button, editQuantityButton;
     @FXML
@@ -161,32 +160,6 @@ public class ProductSearchController implements Initializable {
                 }
             });
 
-            FilteredList<Product> filteredDate = new FilteredList<>(productObservableList, b -> true);
-
-            keywordTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-                filteredDate.setPredicate(product -> {
-
-                    if (newValue.isEmpty() || newValue == null) {
-                        return true;
-                    }
-                    String searchKeyword = newValue.toLowerCase();
-                    if (product.getId_P().toLowerCase().indexOf(searchKeyword) > -1) {
-                        return true;//found a match in product
-                    } else if (product.getName_P().toLowerCase().indexOf(searchKeyword) > -1) {
-                        return true;
-                    } else if (product.getImage_P().toLowerCase().indexOf(searchKeyword) > -1) {
-                        return true;
-                    } else
-                        return false;//not found
-
-                });
-            });
-            SortedList<Product> sortedData = new SortedList<>(filteredDate);
-
-            sortedData.comparatorProperty().bind(productTableView.comparatorProperty());
-
-            productTableView.setItems(sortedData);
-
 
     }
 
@@ -266,7 +239,7 @@ public class ProductSearchController implements Initializable {
 
 
     }
-//
+
     @FXML public void handleUploadButtonOnAction(ActionEvent event){
         FileChooser chooser = new FileChooser();
 
@@ -330,7 +303,7 @@ public class ProductSearchController implements Initializable {
         addProduct_Button.setDisable(false);
 
     }
-//
+
     public void nextButtonOnAction(ActionEvent event)throws IOException{
         Button b = (Button) event.getSource();
         Stage stage = (Stage) b.getScene().getWindow();
@@ -340,5 +313,5 @@ public class ProductSearchController implements Initializable {
         stage.setTitle("MicrochipStarApp!");
         stage.show();
     }
-//
+
 }

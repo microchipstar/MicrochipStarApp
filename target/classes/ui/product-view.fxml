@@ -35,11 +35,6 @@
                 <TableColumn fx:id="image_ProductTableColumn" prefWidth="347.0" text="Image" />
             </columns>
         </TableView>
-        <TextField fx:id="keywordTextField" layoutX="270.0" layoutY="53.0" promptText="ID" />
-        <Label layoutX="133.0" layoutY="47.0" prefHeight="37.0" prefWidth="137.0" text="Product ID">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font></Label>
         <Label layoutX="31.0" layoutY="465.0" prefHeight="37.0" prefWidth="113.0" text="Name product">
          <font>
             <Font name="System Bold" size="15.0" />

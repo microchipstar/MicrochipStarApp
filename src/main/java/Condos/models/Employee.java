@@ -1,14 +1,14 @@
 package Condos.models;
 
 
+import org.springframework.http.ResponseEntity;
+
 public class Employee {
 
     private int idM;
     private String nameM;
     private String usernameM;
     private String passwordM;
-
-
 
 
     public Employee(int idM, String nameM, String usernameM, String passwordM) {
@@ -39,6 +39,8 @@ public class Employee {
     }
 
     public Employee() {
+        this.usernameM = "employee";
+        this.passwordM = "12345";
     }
 
     public String getNameM() {
@@ -65,5 +67,17 @@ public class Employee {
         this.passwordM = passwordM;
     }
 
+    public boolean check(String username, String password) {
+        if (usernameM.equals(username) && passwordM.equals(password)) {
+            return true;
+        }
+        return false;
+    }
 
+    public boolean checkUsername(String username) {
+        if (usernameM.equals(username)) {
+            return false;
+        }
+        return true;
+    }
 }
